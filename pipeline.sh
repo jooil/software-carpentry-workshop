@@ -19,3 +19,5 @@ done
 
 echo Available files
 ls -lh *.csv
+
+echo FINISHED!
