@@ -17,7 +17,15 @@ do
 	mv $f ${f/txt/csv}
 done
 
-echo Available files
-ls -lh *.csv
+echo Available data files
+ls -lh *data.csv
+
+for f in *data.csv
+do
+	~/anaconda/bin/ipython analyze_mosquito_data_script.py $f
+done
+
+mv *png figures/
+mv *parameters.csv parameters/
 
 echo FINISHED!
